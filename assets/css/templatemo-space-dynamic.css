@@ -275,12 +275,12 @@ header
   transition: all .5s ease 0s;
 }
 
-.header-area .main-nav {
+.header-area .main-nav  {
   min-height: 80px;
   background: transparent;
 }
 
-.header-area .main-nav .logo .logo-line{
+.header-area .main-nav .logo{
   line-height: 100px;
   color: #fff;
   font-size: 24px;
@@ -318,20 +318,24 @@ header
 }
 
 .logo-line {
-  width:55px;
-  height:55px;
-  
+  width:180px;
+  margin-top:-10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: right;
 }
 
-.background-header .main-nav .logo-line .logo h4 {
+.background-header .main-nav .logo h4 {
   line-height: 80px;
 }
 
-.background-header .main-nav .nav {
+.background-header .main-nav .nav  {
   margin-top: 20px !important;
+  
+  
 }
 
-.header-area .main-nav .nav {
+.header-area .main-nav .nav{
   float: right;
   margin-top: 30px;
   margin-right: 0px;
@@ -947,6 +951,21 @@ Banner Style
   color: #fff;
 }
 
+.btn-footer {
+	background-color:#fff;
+   color: #03a4ed;           
+   text-decoration: none;
+   border: 2px solid;
+   border-radius: 43px;
+   font-size: 18px;
+   padding: 12px 60px;
+   line-height: 60px;
+   font-weight: 800;
+}
+.btn-footer:hover {
+   text-decoration: none;
+   color:#eba61f;
+}
 
 
 /* 
@@ -1113,19 +1132,21 @@ Portfolio
 }
 
 .our-portfolio .item:hover .hidden-content {
-  top: -100px;
+  top: -50px;
   opacity: 1;
   visibility: visible;
 }
 
 .our-portfolio .item:hover .showed-content {
-  top: 90px;
+  
 }
 
 .our-portfolio .hidden-content {
   background: rgb(255,215,0);
   background: linear-gradient(105deg, rgba(255,215,0,1) 0%, rgba(218,163,32,1) 100%);
-  padding: 30px;
+  padding-top:15px;
+  padding-bottom:35px;
+  width:100%;
   border-radius: 20px;
   text-align: center;
   opacity: 0;
@@ -1137,24 +1158,34 @@ Portfolio
 }
 
 .our-portfolio .hidden-content:after {
-  width: 20px;
-  height: 20px;
+  width:0px;
+  height: 0px;
   position: absolute;
   background: rgb(255,215,0);
   content: '';
   left: 50%;
-  bottom: -8px;
   margin-left: -5px;
   transform: rotate(45deg);
-  background: linear-gradient(105deg, rgba(218,155,12,1) 0%, rgba(255,233,0,1) 100%);
+  background: linear-gradient(105deg, rgba(218,143,12,1) 0%, rgba(255,203,0,1) 100%);
   z-index: -1;
 }
 
+.our-portfolio .hidden-content:hover h4{
+  color: #000;
+}
+
 .our-portfolio .hidden-content h4 {
+  width:100%;
   font-size: 20px;
   font-weight: 700;
   color: #fff;
-  margin-bottom: 20px;
+}
+
+.hidden-content h4 {
+  width:100%;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
 }
 
 .our-portfolio .hidden-content h3 {
@@ -1244,6 +1275,126 @@ aktivitas-robot
   box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
   transition: all 0.5s;
 }
+
+/* 
+---------------------------------------------
+aktivitas-robotv2
+--------------------------------------------- 
+*/
+
+.aktivitas-robot-header {
+  padding-top: 120px;
+  margin-top: 0px;
+  background-color:#ffd969;
+  padding-bottom:40px;
+}
+
+.aktivitas-robot-header .section-heading h2 {
+  text-align: center;
+  margin: 0px 90px 0px 90px;
+  margin-bottom: 10px;
+  position: relative;
+  color:fff;
+  z-index: 2;
+}
+
+.aktivitas-robot-header .section-heading h2 p {
+  color:fff;
+  
+}
+
+.aktivitas-robot-header .item {
+  position: relative;
+}
+
+.aktivitas-robot-header .showed-content {
+  top: 0px;
+  position: relative;
+  z-index: 3;
+  margin-top:25px;
+  background-color: #fff;
+  text-align: center;
+  padding: 5px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  transition: all 0.5s;
+}
+
+/* 
+---------------------------------------------
+Animate border
+--------------------------------------------- 
+*/
+  .animate-border {
+  position: relative;
+  display: block;
+  width: 400px;
+  height: 5px;
+  background: #007bff; }
+
+.animate-border:after {
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: 5px;
+  left: 0;
+  bottom: 0;
+  border-left: 10px solid #fff;
+  border-right: 10px solid #fff;
+  -webkit-animation: animborder 4s linear infinite;
+  animation: animborder 4s linear infinite; }
+
+@-webkit-keyframes animborder {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px); }
+  100% {
+    -webkit-transform: translateX(500px);
+    transform: translateX(500px); } }
+
+@keyframes animborder {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px); }
+  100% {
+    -webkit-transform: translateX(500px);
+    transform: translateX(500px); } }
+
+.animate-border.border-white:after {
+  border-color: #fff; }
+
+.animate-border.border-yellow:after {
+  border-color: #F5B02E; }
+
+.animate-border.border-orange:after {
+  border-right-color: #007bff;
+  border-left-color: #007bff; }
+
+.animate-border.border-ash:after {
+  border-right-color: #EEF0EF;
+  border-left-color: #EEF0EF; }
+
+.animate-border.border-offwhite:after {
+  border-right-color: #F7F9F8;
+  border-left-color: #F7F9F8; }
+
+/* Animated heading border */
+@keyframes primary-short {
+  0% {
+    width: 15%; }
+  50% {
+    width: 90%; }
+  100% {
+    width: 10%; } }
+
+@keyframes primary-long {
+  0% {
+    width: 80%; }
+  50% {
+    width: 0%; }
+  100% {
+    width: 80%; } } 
+
+
 
 /* 
 ---------------------------------------------
@@ -1366,25 +1517,152 @@ Blog
 
 /* 
 ---------------------------------------------
+footer
+--------------------------------------------- 
+*/
+
+.footer-clean {
+  padding:50px 0;
+  background-color:#fff;
+  color:#4b4c4d;
+}
+
+.logo-ra-footer {
+  width:150px;
+  height:150px;
+ 
+}
+
+.footer-clean h2 {
+ font-size: 20px;
+  font-weight: 700;
+  color: #4b4c4d;
+}
+
+.footer-clean p {
+  color: #4b4c4d;
+}
+
+.footer-clean h3 {
+  margin-top:0;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.footer-clean ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+.footer-clean ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+
+}
+
+.footer-clean ul a:hover {
+  opacity:1;
+  color:#fff;
+}
+
+.footer-clean .item.social {
+  text-align:right;
+}
+
+@media (max-width:767px) {
+  .footer-clean .item {
+    text-align:center;
+    padding-bottom:20px;
+  }
+  
+  .logo-ra-footer {
+	  margin-left:158px;
+	  margin-bottom:10px;
+	  
+}
+ .daftardi{
+	margin-left:100px;
+	margin-top:20px;
+}
+}
+
+@media (max-width: 768px) {
+  .footer-clean .item.social  {
+    text-align:center;
+  }
+ 
+  
+}
+
+.footer-clean .item.social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin-left:10px;
+  margin-top:22px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-clean .item.social > a:hover {
+  opacity:0.9;
+}
+
+@media (max-width:991px) {
+  .footer-clean .item.social > a {
+    margin-top:40px;
+  }
+  
+  
+}
+
+@media (max-width:767px) {
+  .footer-clean .item.social > a {
+    margin-top:10px;
+  }
+  
+}
+
+.footer-clean .copyright {
+  margin-top:14px;
+  margin-bottom:0;
+  font-size:13px;
+  opacity:0.6;
+}
+
+
+
+/* 
+---------------------------------------------
 contact
 --------------------------------------------- 
 */
 
 .contact-us {
-  padding: 110px 0px;
+  padding: 50px 0px;
   background-image: url(../images/contact-bg.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
 
-.contact-us .section-heading h2,
-.contact-us .section-heading h2 em,
-.contact-us .section-heading h2 span {
+.contact-us .footer-clean .section-heading h2,
+.contact-us .footer-clean .section-heading h2 em,
+.contact-us .footer-clean .section-heading h2 span {
   color: #fff;
 }
 
-.contact-us .section-heading p {
+.contact-us .footer-clean .section-heading p {
   color: #fff;
   margin-top: 30px;
 }
@@ -1420,35 +1698,53 @@ contact
   font-weight: 400;
 }
 
-.contact-dec {
-  width: 501px;
-  padding-bottom:0px;
-}
+
 
 .daftardi {
-  margin-top:138px;
-  margin-bottom:60px;
   display: flex;
   flex-wrap: wrap;
-  align-content: center;
+  align-content: right;
 
+}
+
+.btn-tautan {
+	background-color:#ffd969;
+   color: #03a4ed;           
+   text-decoration: none;
+   border: 2px solid;
+   border-radius: 43px;
+   font-size: 18px;
+   padding: 10px 18px;
+   line-height: 20px;
+   font-weight: 600;
+}
+
+.btn-tautan:hover {
+   color: #523d01;           
+}
+
+.tautan-ar{
+	width:100%
+	display: flex;
+    flex-wrap: wrap;
+	align-content:center;
 }
 
 .imp1 {
-  width: 201px;
-  height: 156px;
-  padding-right:20px;
+  width: 170px;
+  height: 170px;
 
 }
 .imp2 {
-  width: 201px;
-  height: 156px;
+ width: 130px;
+  height: 130px;
 
 }
 
 .vertical-menu {
   border-bottom: 3px solid  #fff;
 }
+
 
 
 
@@ -1480,7 +1776,7 @@ form#contact input {
 }
 
 form#contact input::placeholder {
-  color: #2a2a2a;
+  color: #fff;
 }
 
 form#contact textarea {
@@ -1685,4 +1981,49 @@ responsive
   .phone-info h4 span i {
     margin-left: 0px;
   }
+  
+  .our-portfolio .hidden-content {
+ width:100%;
+}
+
+.daily .section-heading h2 {
+  text-align: center;
+  margin: 0px 0px 0px 0px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+  .logo-ra-footer {
+	  margin-left:93px;
+	  margin-bottom:10px;
+	  
+}
+
+.btn-tautan {
+	background-color:#ffd969;
+   color: #03a4ed;           
+   text-decoration: none;
+   border: 2px solid;
+   border-radius: 43px;
+   font-size: 18px;
+   padding: 5px 10px;
+   line-height: 12px;
+   font-weight: 50px;
+}
+
+.aktivitas-robot-header .section-heading h2 {
+  text-align: center;
+  margin: 0px 20px 0px 20px;
+  position: relative;
+  color:fff;
+  z-index: 2;
+}
+
+.imp1 {
+  width: 170px;
+  height: 170px;
+  padding-right:40px;
+
+}
+
 }
